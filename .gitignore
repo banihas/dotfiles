@@ -2,6 +2,9 @@
 home/.config/herdr/*.log
 home/.config/herdr/session.json
 home/.config/herdr/*.sock
+home/.config/herdr/.plugins.lock
+home/.config/herdr/release-notes.json
+home/.pi/agent/extensions/herdr-agent-state.ts
 
 # macOS + nix build noise
 .DS_Store
