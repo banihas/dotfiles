@@ -15,9 +15,13 @@
     "npm:pi-web-access@0.46.0",
     "npm:@ryan_nookpi/pi-extension-codex-fast-mode@0.2.6"
   ],
-  "lastChangelogVersion": "1.4.0",
+  "lastChangelogVersion": "1.5.0",
   "enabledModels": [
     "openrouter/deepseek/deepseek-v4.1-flash",
-    "openrouter/z-ai/glm-5.3"
-  ]
+    "openrouter/z-ai/glm-5.3",
+    "openrouter/~moonshotai/kimi-latest"
+  ],
+  "extensionChangelogVersions": {
+    "{\"source\":\"npm:pi-web-access@0.46.0\",\"scope\":\"user\"}": "0.46.0"
+  }
 }
