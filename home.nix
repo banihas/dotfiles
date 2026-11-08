@@ -30,6 +30,16 @@ in
     syntaxHighlighting.enable = true;  # commands turn green when valid
     initContent = ''
       bindkey '^f' autosuggest-accept
+
+      # Bare `deeptutor` launches the web UI; extra args go to the CLI
+      # e.g. `deeptutor chat`, `deeptutor module list`.
+      deeptutor() {
+        if (( $# == 0 )); then
+          ( cd "$HOME/my-deeptutor" && exec .venv/bin/deeptutor start )
+        else
+          ( cd "$HOME/my-deeptutor" && exec .venv/bin/deeptutor "$@" )
+        fi
+      }
     '';
     shellAliases = {
       ".." = "cd ..";
