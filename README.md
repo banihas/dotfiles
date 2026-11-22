@@ -25,9 +25,9 @@ Running the switch builds:
 
 - System settings (dark mode, key repeat, dock, Finder, trackpad)
 - Homebrew apps (casks and CLI tools)
-- Nix user packages (ripgrep, fd, fzf, jq, lazygit, Neovim, Hack Nerd Font)
+- Nix user packages (ripgrep, fd, fzf, jq, lazygit, Neovim, Go + gopls, Hack Nerd Font)
 - Shell (zsh, aliases, starship prompt)
-- Editor (Neovim config with the rose-pine moon theme)
+- Editor (Neovim config with the rose-pine moon theme and Go support)
 - Terminal (WezTerm config with the rose-pine moon theme and dimmed unfocused windows)
 - Agent configs (Claude, Codex, opencode all share one AGENTS.md)
 - Optional Pi theme and local extensions, generic UI settings and model overrides, plus two deliberately pinned third-party Pi packages
@@ -186,6 +186,8 @@ The first time you launch `nvim`, it bootstraps [lazy.nvim](https://github.com/f
 That needs network access once; after that it's offline.
 Neovim and WezTerm both use the rose-pine moon theme.
 Neovim keeps italics off and uses a transparent background on macOS, Windows, and WSL so it matches the terminal setup.
+
+Go support uses gopls through Neovim's built-in LSP client, with treesitter highlighting/folds, blink.cmp completion, and neotest-go (`<leader>tt` nearest test, `<leader>tf` file, `<leader>ts` summary, `<leader>to` output). Saving a Go file formats it with gofmt. `go`, `gopls`, `golangci-lint`, `delve`, and `tree-sitter` are declared in `home.nix`, so toolchain changes need `./rebuild.sh`. `golangci-lint` and `delve` are on `PATH` but have no Neovim keymaps.
 
 ## License
 

@@ -18,6 +18,12 @@ in
     neovim
     # node for npm-installed CLIs (pi needs Node 22+)
     nodejs_22
+    # go toolchain and editor tooling
+    go
+    gopls
+    golangci-lint
+    delve
+    tree-sitter   # nvim-treesitter builds parsers with this CLI
     # the font everything renders in
     nerd-fonts.hack
   ];

@@ -15,7 +15,7 @@ vim.lsp.enable('ruff')
 
 -- Keymaps that only make sense once a language server is attached.
 vim.api.nvim_create_autocmd('LspAttach', {
-  desc = 'Python LSP keymaps',
+  desc = 'LSP keymaps',
   callback = function(args)
     local map = function(lhs, rhs, desc)
       vim.keymap.set('n', lhs, rhs, { buffer = args.buf, desc = desc })
