@@ -118,9 +118,9 @@ That means every time you switch, Homebrew removes any package or cask on your m
 If you already have Homebrew stuff installed that isn't in that list, the first switch will uninstall it.
 Read through `brews` and `casks` before you run `bootstrap.sh` or `rebuild.sh` for the first time, and add anything you want to keep.
 
-**About `herdr`:** it's in the `brews` list.
-It's a real public Homebrew formula (`brew info herdr` finds it in homebrew-core, no tap needed), so it will install fine.
-If you don't use it, just remove it from `brews` in your copy.
+**About `omp` (Oh My Pi) and Orca:** both come from third-party Homebrew taps, declared in `taps` in `configuration.nix`.
+`omp` is the `can1357/tap/omp` formula; Orca is the `stablyai/orca/orca` cask (always use the full cask name, since the bare `orca` cask is an unrelated Plotly tool).
+If you don't use them, remove them from `brews`/`casks` and `taps` in your copy.
 
 **Heads-up:**
 

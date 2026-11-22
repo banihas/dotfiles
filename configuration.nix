@@ -34,14 +34,19 @@
     onActivation.cleanup = "zap";  # remove anything not listed here
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
+    taps = [
+      "can1357/tap"    # omp (Oh My Pi)
+      "stablyai/orca"  # Orca agent IDE
+    ];
     brews = [
-      "herdr"
+      "can1357/tap/omp"
     ];
     casks = [
       "wezterm"
       "claude-code"
       "librewolf"
       "spokenly"
+      "stablyai/orca/orca"  # Orca agent IDE (bare "orca" is an unrelated Plotly cask)
     ];
   };
 }
